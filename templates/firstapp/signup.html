@@ -1,0 +1,74 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Driver Signup Form Flat Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="keywords" content="Client Signup Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />-->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{%static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="{%static '//fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700'%}" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+<!-- //web font -->
+<body style="background-image:url('{% static 'images/icons/bg2.jpg' %}')"> </body>
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: top right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+<body>
+
+
+<button  class="button button2"><a href="{% url 'home'%}">Go Back</a></button>
+
+</body>
+</head>
+<body>
+	<!-- main -->
+	<div class="main main-agileits">
+		<div class="main-agilerow"> 
+			<div class="signup-wthreetop">
+				<h2>Registration for Drivers</h2>
+
+			</div>	
+			<div class="contact-wthree">
+				<form method="post">
+					{% csrf_token %}
+                    {{ form }}
+					<div class="agileits-row2 w3ls-formrow2">
+						<input type="checkbox" id="brand2" value="">
+						<label for="brand2"><span></span>I accept the terms of Use</label> 
+					</div>  
+					<input type="submit" value="SUBMIT" >
+				</form>
+			</div>  
+		</div>	
+	</div>	
+	<!-- //main -->
+	<!-- copyright -->
+	<div class="w3copyright-agile">
+
+	</div>
+	>
+</body>
+</html>

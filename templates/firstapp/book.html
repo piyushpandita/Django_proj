@@ -1,0 +1,124 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+<title>Book A Cab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cab Booking" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+
+<!-- css files -->
+<link href="{% static 'css/styless.css'%}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/wickedpicker.css'%}" rel="stylesheet" type='text/css' media="all" />
+<link rel="stylesheet" href="{% static 'css/jquery-ui.css'%}" />
+<!-- //css files -->
+
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i" rel="stylesheet">
+<!--//online-fonts -->
+</head>
+<body>
+<div class="header">
+	<h1>Cab Booking Form</h1>
+</div>
+
+<div class="w3-main">
+	<!-- Main -->
+	<div class="about-bottom">
+		<div class="w3l_about_bottom_right two">
+			<h2 class="tittle"><img src="{% static 'images/icons/cab.png" alt=""><span>Book Cab Now</span></h2>
+			<div class="book-form">
+
+			    <form action="#" method="post">
+					<div class="form-date-w3-agileits">
+						<div class="form-agileits">
+							<label> Name :</label>
+						</div>
+						<div class="form-agileits-2">
+							<input type="text" name="name" placeholder="Your Name" required="">
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<div class="form-date-w3-agileits second-agile">
+						<div class="form-agileits">
+							<label> Phone Number :</label>
+						</div>
+						<div class="form-agileits-2">
+							<input type="text" name="name" placeholder="Your Phone Number" required="">
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<div class="form-date-w3-agileits">
+						<div class="form-agileits">
+							<label> Pickup Location :</label>
+						</div>
+						<div class="form-agileits-2">
+							<input type="text" name="name" placeholder="Enter an origin location" required="">
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<div class="form-date-w3-agileits">
+						<div class="form-agileits">
+							<label> Drop Location :</label>
+						</div>
+						<div class="form-agileits-2">
+							<input type="text" name="name" placeholder="Enter a destination location" required="">
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<div class="form-date-w3-agileits">
+						<div class="form-agileits">
+							<label>Pickup Date :</label>
+						</div>
+						<div class="form-agileits-2">
+							<input  id="datepicker" name="date" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+						</div>	
+						<div class="clear"> </div>						
+					</div>
+					<div class="form-date-w3-agileits">
+						<div class="form-agileits">
+							<label>Pickup Time :</label>
+						</div>
+						<div class="form-agileits-2">
+							<input type="text" id="timepicker" name="Time" class="timepicker form-control" value="Hrs:Min">	
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<div class="make">
+						  <input type="submit" value="Book My Cab">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+
+
+	<!-- js-scripts-->
+		<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js"></script>
+		
+		<!-- Time -->
+		<script type="text/javascript" src="{% static 'js/wickedpicker.js"></script>
+			<script type="text/javascript">
+				$('.timepicker').wickedpicker({twentyFour: false});
+			</script>
+		<!-- //Time -->
+		
+			<!-- Calendar -->
+				<script src="{% static 'js/jquery-ui.js"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+	<!-- //js-scripts-->
+
+</body>
+</html>
